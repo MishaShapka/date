@@ -1,7 +1,9 @@
 import subprocess as cmd
+import datetime
+dt_now = str(datetime.datetime.now())
 
 with open("date.txt", "a") as myfile:
-    myfile.write("appended text")
+    myfile.write(dt_now)
 
 cmd.run("cd C:/Users/ShapkaMY/Desktop/github/date", check=True, shell=True)
 cmd.run('git add .', check=True, shell=True)
